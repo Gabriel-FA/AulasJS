@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            background: rgb(81, 191, 219);
+            color: white;
+            font: normal 18pt Arial;
+        }
+        div#sit{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Sua nacionalidade <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id = "sit">Situação: </div>
+    <script>
+        function verificar(){
+            var txtnac = window.document.getElementById('txtnac')
+            var sit = window.document.getElementById('sit')
+            var pais = (txtnac).value
+    if(pais == 'Brasil'){
+        sit.innerHTML +='Você é <srong>brasileiro</strong>'
+    }
+    else{
+        sit.innerHTML += 'Você é estrangeiro'
+    }
+}
+    </script>
+</body>
+</html>
